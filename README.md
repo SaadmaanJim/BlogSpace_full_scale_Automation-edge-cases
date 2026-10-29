@@ -17,9 +17,8 @@ Next.js 14 · React 18 · TypeScript (strict) · Tailwind CSS 3 · react-hook-fo
 
 ## Backend dependency
 This app has **no data of its own** — every blog, user and session comes from the Blog REST API
-
-```bash
 This app needs the Blog REST API running. Backend repository: https://github.com/SaadmaanJim/Blog-Application-REST-api-Development
+```bash
 git clone https://github.com/SaadmaanJim/Blog-Application-REST-api-Development
 cd Blog-Application-REST-api-Development
 npm install
