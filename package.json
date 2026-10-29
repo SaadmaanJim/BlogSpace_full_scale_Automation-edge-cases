@@ -1,0 +1,44 @@
+{
+  "name": "blogspace-frontend",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev -p 3000",
+    "build": "next build",
+    "start": "next start -p 3000",
+    "lint": "next lint",
+    "typecheck": "tsc --noEmit",
+    "test": "playwright test",
+    "test:smoke": "playwright test --grep @smoke",
+    "test:regression": "playwright test --grep @regression",
+    "test:api": "playwright test --project=api",
+    "test:ui": "playwright test --project=chromium --project=mobile",
+    "test:security": "playwright test --grep @security",
+    "test:a11y": "playwright test --grep @a11y",
+    "test:headed": "playwright test --project=chromium --headed",
+    "test:report": "playwright show-report",
+    "typecheck:tests": "tsc -p tests/tsconfig.json --noEmit"
+  },
+  "dependencies": {
+    "@hookform/resolvers": "3.9.0",
+    "next": "14.2.15",
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
+    "react-hook-form": "7.53.0",
+    "zod": "3.23.8"
+  },
+  "devDependencies": {
+    "@axe-core/playwright": "^4.10.0",
+    "@playwright/test": "1.48.2",
+    "@types/node": "20.16.11",
+    "@types/react": "18.3.11",
+    "@types/react-dom": "18.3.1",
+    "autoprefixer": "10.4.20",
+    "dotenv": "^16.4.5",
+    "eslint": "8.57.1",
+    "eslint-config-next": "14.2.15",
+    "postcss": "8.4.47",
+    "tailwindcss": "3.4.14",
+    "typescript": "5.6.3"
+  }
+}
