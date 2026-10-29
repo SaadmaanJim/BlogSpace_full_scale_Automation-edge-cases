@@ -17,11 +17,16 @@ Next.js 14 · React 18 · TypeScript (strict) · Tailwind CSS 3 · react-hook-fo
 
 ## Backend dependency
 This app has **no data of its own** — every blog, user and session comes from the Blog REST API
-(`/api/auth/*`, `/api/users/*`, `/api/blogs/*`). Start the backend first and make sure:
-1. It listens on the URL in `NEXT_PUBLIC_API_URL` (default `http://localhost:5000/api`).
-2. **CORS** allows `http://localhost:3000`.
-3. Uploaded avatars are served statically (e.g. `/uploads/...`) from the same origin as the API.
-4. For forgot-password, the emailed link points to `http://localhost:3000/reset-password/<token>`.
+
+```bash
+This app needs the Blog REST API running. Backend repository: https://github.com/SaadmaanJim/Blog-Application-REST-api-Development
+git clone https://github.com/SaadmaanJim/Blog-Application-REST-api-Development
+cd Blog-Application-REST-api-Development
+npm install
+cp .env.example .env     
+npm run dev
+```
+The backend must run on the URL set in `NEXT_PUBLIC_API_URL`.
 
 ## Installation
 ```bash
@@ -37,13 +42,12 @@ cp .env.example .env.local
 | `E2E_EMAIL` / `E2E_PASSWORD` | *(optional)* existing normal user for Playwright | `john@example.com` / `password123` |
 
 
-
 ## How to run
 ```bash
-npm run dev          
-npm run build && npm start
-npm run typecheck && npm run lint
-npm run test:e2e     # needs the backend running + seeded users
+1. Start the backend (see "Backend dependency").
+2. Start the frontend:
+npm run dev
+3. Open `http://localhost:3001`.
 ```
 
 ## Application routes
