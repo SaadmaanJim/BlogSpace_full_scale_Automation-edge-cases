@@ -90,6 +90,4 @@ npm run test:report       # open the HTML report
 ```
 CI: `.github/workflows/e2e.yml` (template: set the `BACKEND_REPO` variable).
 
-## Screenshots
-Add screenshots of the major pages to `docs/screenshots/` and link them here:
-`home`, `blog details`, `login`, `register`, `dashboard`, `my blogs`, `create blog`, `profile`, `admin users`, `mobile drawer`.
+
